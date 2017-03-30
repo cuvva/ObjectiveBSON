@@ -29,6 +29,18 @@
 #define BSON_MIN_KEY 0xFF //NA
 #define BSON_MAX_KEY 0x7F //NA
 
+
+@interface ObjectID : NSObject
+
+@property (nonatomic) NSData* id;
+
++(ObjectID*)withID:(NSData*)id;
+
+-(BOOL)equals:(ObjectID*)other;
+
+@end
+
+
 @implementation ObjectID
 
 +(ObjectID*)withID:(NSData*)id {

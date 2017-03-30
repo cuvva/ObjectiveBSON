@@ -8,16 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ObjectID : NSObject
-
-@property NSData* id;
-
-+(ObjectID*)withID:(NSData*)id;
-
--(BOOL)equals:(ObjectID*)other;
-
-@end
-
 @interface BSONSerialization : NSObject
 
 +(NSData*)BSONDataFromDictionary:(NSDictionary*)dictionary;
